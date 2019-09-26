@@ -4,7 +4,7 @@ Tic Tac Toe is a game that takes seconds to learn but minutes to master! This ga
 
 ## User Stories
 
-1. [ ] As a user, I want to be able to signup with email and password.
+1. [x] As a user, I want to be able to signup with email and password.
 1. [ ] As a user, I want to create a signin.
 1. [ ] As a user, I want to change my password.
 1. [ ] As a user, I want to sign-out.
