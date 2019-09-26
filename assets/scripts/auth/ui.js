@@ -2,14 +2,14 @@
 
 const successMessage = function (newText) {
   $('#message').text(newText)
-  $('#message').removeClass('failure')
-  $('#message').addClass('success')
+  $('#message').removeClass('alert-warning')
+  $('#message').addClass('alert-success')
 }
 
 const failureMessage = function (newText) {
   $('#message').text(newText)
-  $('#message').removeClass('success')
-  $('#message').addClass('failure')
+  $('#message').removeClass('alert-success')
+  $('#message').addClass('alert-warning')
 }
 
 const onSignUpSuccess = function () {
