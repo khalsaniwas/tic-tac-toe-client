@@ -25,6 +25,7 @@ const onSignInSuccess = function (formData) {
   successMessage('Signed in successfully')
   $('#game').removeClass('invisible')
   $('#game').addClass('visible')
+  $('#sign-up-container').addClass('d-none')
 }
 
 const onSignInFailure = function () {
@@ -35,6 +36,7 @@ const onSignOutSuccess = function () {
   successMessage('Signed out successfully')
   $('#game').removeClass('visible')
   $('#game').addClass('invisible')
+  $('#sign-up-container').removeClass('d-none')
 }
 
 const onSignOutFailure = function () {
