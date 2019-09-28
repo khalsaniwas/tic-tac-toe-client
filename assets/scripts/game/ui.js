@@ -1,28 +1,26 @@
 'use strict'
-const store = require('../store')
 
 const successMessage = function (newText) {
-  $('#displayGame').text(newText)
-  $('#displayGame').removeClass('alert-warning')
-  $('#displayGame').addClass('alert-success')
+  $('#turn').text(newText)
 }
 
 const failureMessage = function (newText) {
-  $('#displayGame').text(newText)
-  $('#displayGame').removeClass('alert-success')
-  $('#displayGame').addClass('alert-warning')
+  $('#turn').text(newText)
 }
 
-const onDisplayGameSuccess = function (gameData) {
-  store.user = gameData.user
-  successMessage('Start playing the game')
+const onStartGameSuccess = function (gameData) {
+  clearGameBoard()
+  successMessage('Turn: Player X')
 }
 
-const onDisplayGameFailure = function () {
+const onStartGameFailure = function () {
   failureMessage('failed to display game')
 }
 
+const clearGameBoard = function () {
+  $('.box').text('')
+}
 module.exports = {
-  onDisplayGameSuccess,
-  onDisplayGameFailure
+  onStartGameSuccess,
+  onStartGameFailure
 }
