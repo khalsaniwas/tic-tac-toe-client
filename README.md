@@ -10,7 +10,7 @@ Tic Tac Toe is a game that takes seconds to learn but minutes to master! This ga
 1. [x] As a user, I want to sign-out.
 
 1. [x] As a user, I want to see the game when signed in.
-1. [ ] As a user, I want to hide signup form after signin.
+1. [x] As a user, I want to hide signup form after signin.
 1. [ ] As a user, I want to show signin after signup.
 1. [ ] As a user, I want to show signout and changepassword after signin.
 1. [ ] As a user, I want to hide changepassword/gameboard and show signup/signin after signout.
