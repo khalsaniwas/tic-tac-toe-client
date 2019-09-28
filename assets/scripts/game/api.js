@@ -14,6 +14,26 @@ const startGame = function () {
   })
 }
 
+const turn = function (boxId, gameId) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + `/games/${gameId}`,
+    data: {
+      'game': {
+        'cell': {
+          'index': boxId,
+          'value': 'x'
+        },
+        'over': false
+      }
+    },
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
-  startGame
+  startGame,
+  turn
 }
