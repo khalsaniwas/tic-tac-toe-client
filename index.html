@@ -16,7 +16,8 @@
 
       <div id="message" class="alert" role="alert">
       </div>
-      <div>
+
+      <div id="sign-up-container">
         <h2>Sign-up</h2>
         <form id="sign-up">
           <input type="email" name="credentials[email]" placeholder='Enter email...'>
@@ -26,7 +27,7 @@
         </form>
       </div>
 
-      <div>
+      <div id='sign-in-container'>
         <h2>Sign-in</h2>
         <form id="sign-in">
           <input type="email" name="credentials[email]" placeholder='Enter email...'>
@@ -35,14 +36,14 @@
         </form>
       </div>
 
-      <div>
+      <div id='sign-out-container' class='d-none'>
         <h2>Sign-out</h2>
         <form id="sign-out">
           <button>Sign out</button>
         </form>
       </div>
 
-      <div>
+      <div id='change-password-container' class='d-none'>
         <h2>Change Password</h2>
         <form id='change-password'>
           <input type="password" name="passwords[old]" placeholder="Enter old password">
