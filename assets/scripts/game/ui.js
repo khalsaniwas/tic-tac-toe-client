@@ -12,8 +12,9 @@ const failureMessage = function (newText) {
 
 const onStartGameSuccess = function (gameData) {
   clearGameBoard()
-  successMessage('Turn: Player X')
+  successMessage('Turn: Player x')
   store.game = gameData.game
+  store.turn = 'x'
   console.log(gameData)
   console.log('store Data', store)
 }
@@ -27,11 +28,17 @@ const clearGameBoard = function () {
 }
 
 const onTurnSuccess = function (gameData) {
-  successMessage('Turn: Player O')
+  successMessage('Turn: Player ' + store.turn)
   store.game = gameData.game
   for (let i = 0; i < store.game.cells.length; i++) {
     $(`#${i}`).text(store.game.cells[i])
   }
+  if (store.turn === 'x') {
+    store.turn = 'o'
+  } else {
+    store.turn = 'x'
+  }
+  console.log('store.turn', store.turn)
   console.log(gameData)
 }
 
