@@ -22,7 +22,7 @@ const turn = function (boxId, gameId) {
       'game': {
         'cell': {
           'index': boxId,
-          'value': 'x'
+          'value': store.turn
         },
         'over': false
       }
