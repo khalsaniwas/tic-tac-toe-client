@@ -20,12 +20,19 @@ const onSignUpFailure = function () {
   failureMessage('Sign up failed')
 }
 
+const showElement = function (selector) {
+  $(selector).removeClass('d-none')
+}
+
 const onSignInSuccess = function (formData) {
   store.user = formData.user
   successMessage('Signed in successfully')
   $('#game').removeClass('invisible')
   $('#game').addClass('visible')
   $('#sign-up-container').addClass('d-none')
+  showElement('#sign-out-container')
+  showElement('#change-password-container')
+  $('#sign-in-container').addClass('d-none')
 }
 
 const onSignInFailure = function () {
@@ -36,7 +43,8 @@ const onSignOutSuccess = function () {
   successMessage('Signed out successfully')
   $('#game').removeClass('visible')
   $('#game').addClass('invisible')
-  $('#sign-up-container').removeClass('d-none')
+  showElement('#sign-up-container')
+  showElement('#sign-in-container')
 }
 
 const onSignOutFailure = function () {
