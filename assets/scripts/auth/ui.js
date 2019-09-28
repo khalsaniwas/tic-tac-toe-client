@@ -23,6 +23,8 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (formData) {
   store.user = formData.user
   successMessage('Signed in successfully')
+  $('#game').removeClass('invisible')
+  $('#game').addClass('visible')
 }
 
 const onSignInFailure = function () {
@@ -31,6 +33,8 @@ const onSignInFailure = function () {
 
 const onSignOutSuccess = function () {
   successMessage('Signed out successfully')
+  $('#game').removeClass('visible')
+  $('#game').addClass('invisible')
 }
 
 const onSignOutFailure = function () {
