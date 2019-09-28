@@ -24,15 +24,19 @@ const showElement = function (selector) {
   $(selector).removeClass('d-none')
 }
 
+const hideElement = function (selector) {
+  $(selector).addClass('d-none')
+}
+
 const onSignInSuccess = function (formData) {
   store.user = formData.user
   successMessage('Signed in successfully')
   $('#game').removeClass('invisible')
   $('#game').addClass('visible')
-  $('#sign-up-container').addClass('d-none')
+  hideElement('#sign-up-container')
   showElement('#sign-out-container')
   showElement('#change-password-container')
-  $('#sign-in-container').addClass('d-none')
+  hideElement('#sign-in-container')
 }
 
 const onSignInFailure = function () {
