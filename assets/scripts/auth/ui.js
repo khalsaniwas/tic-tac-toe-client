@@ -49,6 +49,9 @@ const onSignOutSuccess = function () {
   $('#game').addClass('invisible')
   showElement('#sign-up-container')
   showElement('#sign-in-container')
+  hideElement('#game')
+  hideElement('#change-password-container')
+  hideElement('#sign-out-container')
 }
 
 const onSignOutFailure = function () {
