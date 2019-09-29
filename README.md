@@ -15,8 +15,8 @@ Tic Tac Toe is a game that takes seconds to learn but minutes to master! This ga
 1. [x] As a user, I want to hide changepassword/gameboard and show signup/signin after signout.
 
 1. [x] As a user, I want to click start button to play game.
-1. [ ] As a user, I want to click a box to mark X or O.
-1. [ ] As a user, I want to take every other turn.
+1. [x] As a user, I want to click a box to mark X or O.
+1. [x] As a user, I want to take every other turn.
 1. [ ] As a user, I want to see an error when I make wrong move.
 1. [ ] As a user, I want to see when I win or lose.
 
