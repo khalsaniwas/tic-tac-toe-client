@@ -10,13 +10,15 @@ const failureMessage = function (newText) {
   $('#turn').text(newText)
 }
 
+const errorMessage = function (newText) {
+  $('#error-message').text(newText)
+}
+
 const onStartGameSuccess = function (gameData) {
   clearGameBoard()
   successMessage('Turn: Player x')
   store.game = gameData.game
   store.turn = 'x'
-  console.log(gameData)
-  console.log('store Data', store)
 }
 
 const onStartGameFailure = function () {
@@ -48,5 +50,6 @@ module.exports = {
   onStartGameSuccess,
   onStartGameFailure,
   onTurnSuccess,
-  onTurnFailure
+  onTurnFailure,
+  errorMessage
 }

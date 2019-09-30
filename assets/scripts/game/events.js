@@ -14,8 +14,14 @@ const onStartGame = function () {
 
 const onTurn = function () {
   const box = event.target
-  console.log(box.id)
-  console.log(store.game.id)
+
+  if (store.game.cells[box.id] !== '') {
+    ui.errorMessage('wrong move')
+    return
+  } else {
+    ui.errorMessage('')
+  }
+
   api.turn(box.id, store.game.id)
     .then(ui.onTurnSuccess)
     .catch(ui.onTurnFailure)
