@@ -35,6 +35,7 @@ const onTurnSuccess = function (gameData) {
     $(`#${i}`).text(store.game.cells[i])
   }
   checkWin()
+  console.table(gameData)
 
   if (store.turn === 'x') {
     store.turn = 'o'
@@ -73,6 +74,9 @@ const checkWin = function () {
     store.game.over = true
   } else if (store.game.cells[2] !== '' && store.game.cells[2] === store.game.cells[4] && store.game.cells[4] === store.game.cells[6]) {
     errorMessage('Winner is: ' + store.game.cells[2])
+    store.game.over = true
+  } else if (store.game.cells.every((x) => x !== '')) {
+    errorMessage('Game over, tie')
     store.game.over = true
   }
 }
