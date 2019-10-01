@@ -52,20 +52,28 @@ const onTurnFailure = function (gameData) {
 const checkWin = function () {
   if (store.game.cells[0] !== '' && store.game.cells[0] === store.game.cells[1] && store.game.cells[1] === store.game.cells[2]) {
     errorMessage('Winner is: ' + store.game.cells[0])
+    store.game.over = true
   } else if (store.game.cells[3] !== '' && store.game.cells[3] === store.game.cells[4] && store.game.cells[4] === store.game.cells[5]) {
     errorMessage('Winner is: ' + store.game.cells[3])
+    store.game.over = true
   } else if (store.game.cells[6] !== '' && store.game.cells[6] === store.game.cells[7] && store.game.cells[7] === store.game.cells[8]) {
     errorMessage('Winner is: ' + store.game.cells[6])
+    store.game.over = true
   } else if (store.game.cells[0] !== '' && store.game.cells[0] === store.game.cells[3] && store.game.cells[3] === store.game.cells[6]) {
     errorMessage('Winner is: ' + store.game.cells[0])
+    store.game.over = true
   } else if (store.game.cells[1] !== '' && store.game.cells[1] === store.game.cells[4] && store.game.cells[4] === store.game.cells[7]) {
     errorMessage('Winner is: ' + store.game.cells[1])
+    store.game.over = true
   } else if (store.game.cells[2] !== '' && store.game.cells[2] === store.game.cells[5] && store.game.cells[5] === store.game.cells[8]) {
     errorMessage('Winner is: ' + store.game.cells[2])
+    store.game.over = true
   } else if (store.game.cells[0] !== '' && store.game.cells[0] === store.game.cells[4] && store.game.cells[4] === store.game.cells[8]) {
     errorMessage('Winner is: ' + store.game.cells[0])
+    store.game.over = true
   } else if (store.game.cells[2] !== '' && store.game.cells[2] === store.game.cells[4] && store.game.cells[4] === store.game.cells[6]) {
     errorMessage('Winner is: ' + store.game.cells[2])
+    store.game.over = true
   }
 }
 
