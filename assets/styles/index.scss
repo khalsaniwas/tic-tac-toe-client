@@ -1,4 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
+@import '~animate.css/animate.min.css';
+
 
 $background-color: #edece8;
 $border-dark: #000;
@@ -15,7 +17,10 @@ $border-dark: #000;
 .box {
   background-color: $background-color;
   border: solid $border-dark 2px;
-  border-radius: 5px;
   display: block;
-  height: 144px;
+  height: 147px;
+}
+
+body {
+  text-align: center;
 }
