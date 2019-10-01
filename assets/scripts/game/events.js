@@ -15,8 +15,11 @@ const onStartGame = function () {
 const onTurn = function () {
   const box = event.target
 
-  if (store.game.cells[box.id] !== '') {
-    ui.errorMessage('wrong move')
+  if (store.game.over === true) {
+    ui.errorMessage('Game over: Start game again.')
+    return
+  } else if (store.game.cells[box.id] !== '') {
+    ui.errorMessage('Wrong move')
     return
   } else {
     ui.errorMessage('')
