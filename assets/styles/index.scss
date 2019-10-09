@@ -2,25 +2,39 @@
 @import '~animate.css/animate.min.css';
 
 
-$background-color: #edece8;
+$background-color: #d8d3db;
 $border-dark: #000;
-
+$button-margin: 6px;
+$page-background: #f8f5fa;
 .container {
   display: flex;
   flex-wrap: wrap;
-  font-size: 100px;
-  height: 440px;
+  font-size: 90px;
+  height: 400px;
   text-align: center;
-  width: 440px;
+  width: 400px;
 }
 
 .box {
   background-color: $background-color;
   border: solid $border-dark 2px;
   display: block;
-  height: 147px;
+  height: 134px;
 }
 
 body {
+  background-color: $page-background;
   text-align: center;
+}
+
+.total-field {
+  margin: $button-margin;
+}
+
+.password-button {
+  margin: $button-margin;
+}
+
+.total-container {
+  display: inline-block;
 }

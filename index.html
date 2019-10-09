@@ -17,7 +17,7 @@
       <div id="message" class="alert" role="alert">
       </div>
 
-      <div id="sign-up-container">
+      <div id="sign-up-container" class='sign-up'>
         <h2>Sign-up</h2>
         <form id="sign-up">
           <input type="email" name="credentials[email]" placeholder='Enter email...'>
@@ -37,18 +37,18 @@
       </div>
 
       <div id='sign-out-container' class='d-none'>
-        <h2>Sign-out</h2>
+        <h3>Sign-out</h3>
         <form id="sign-out">
           <button>Sign out</button>
         </form>
       </div>
 
       <div id='change-password-container' class='d-none'>
-        <h2>Change Password</h2>
+        <h3>Change Password</h3>
         <form id='change-password'>
           <input type="password" name="passwords[old]" placeholder="Enter old password">
-          <input type="password" name="passwords[new]" placeholder="Enter old password">
-          <button>Change Password</button>
+          <input type="password" name="passwords[new]" placeholder="Enter new password">
+          <button class='password-button'>Change Password</button>
         </form>
       </div>
 
@@ -59,10 +59,17 @@
         </div>
 
         <div>
-          <h4 id="turn"></h4>
+          <h3 id="turn"></h3>
         </div>
 
         <div id="error-message" class="alert" role="alert">
+        </div>
+
+        <div class='total-container'>
+          <button id="total-games" class="total-button">Total Games</button>
+
+          <div id="games-played" class="total-field">####
+          </div>
         </div>
 
         <div id="gameBoard" class="container">
@@ -77,6 +84,7 @@
           <div id="8" class="col-4 box">e</div>
         </div>
       </div>
+
 
 
 

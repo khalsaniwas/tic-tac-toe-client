@@ -33,7 +33,18 @@ const turn = function (boxId, gameId) {
   })
 }
 
+const getCount = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/games/',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
   startGame,
-  turn
+  turn,
+  getCount
 }

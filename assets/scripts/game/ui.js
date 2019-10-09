@@ -16,6 +16,7 @@ const errorMessage = function (newText) {
 
 const onStartGameSuccess = function (gameData) {
   clearGameBoard()
+  errorMessage('')
   successMessage('Turn: Player x')
   store.game = gameData.game
   store.turn = 'x'
@@ -35,7 +36,6 @@ const onTurnSuccess = function (gameData) {
     $(`#${i}`).text(store.game.cells[i])
   }
   checkWin()
-  console.table(gameData)
 
   if (store.turn === 'x') {
     store.turn = 'o'
@@ -81,10 +81,21 @@ const checkWin = function () {
   }
 }
 
+const onGetCountSuccess = function (responseData) {
+  $('#games-played').text(responseData.games.length)
+  console.log('number of games', responseData.games.length)
+}
+
+const onGetCountFailure = function (gameData) {
+  console.log(gameData.game)
+}
+
 module.exports = {
   onStartGameSuccess,
   onStartGameFailure,
   onTurnSuccess,
   onTurnFailure,
-  errorMessage
+  errorMessage,
+  onGetCountSuccess,
+  onGetCountFailure
 }

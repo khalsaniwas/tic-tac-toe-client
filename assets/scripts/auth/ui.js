@@ -19,6 +19,7 @@ const onSignUpSuccess = function () {
 
 const onSignUpFailure = function () {
   failureMessage('Sign up failed')
+  $('#sign-up').trigger('reset')
 }
 
 const showElement = function (selector) {
@@ -42,6 +43,7 @@ const onSignInSuccess = function (formData) {
 
 const onSignInFailure = function () {
   failureMessage('Sign in failed')
+  $('#sign-in').trigger('reset')
 }
 
 const onSignOutSuccess = function () {
@@ -58,6 +60,7 @@ const onSignOutSuccess = function () {
 
 const onSignOutFailure = function () {
   failureMessage('Sign out failed')
+  $('#sign-in').trigger('reset')
 }
 
 const onChangePasswordSuccess = function () {
@@ -67,6 +70,7 @@ const onChangePasswordSuccess = function () {
 
 const onChangePasswordFailure = function () {
   failureMessage('Password change unsuccessful')
+  $('#change-password').trigger('reset')
 }
 
 module.exports = {

@@ -16,7 +16,7 @@ const onTurn = function () {
   const box = event.target
 
   if (store.game.over === true) {
-    ui.errorMessage('Game over: Start game again.')
+    ui.errorMessage('Game over - Press "Start Game" to play again.')
     return
   } else if (store.game.cells[box.id] !== '') {
     ui.errorMessage('Wrong move')
@@ -30,7 +30,15 @@ const onTurn = function () {
     .catch(ui.onTurnFailure)
 }
 
+const onGetCount = function (event) {
+  event.preventDefault()
+  api.getCount()
+    .then(ui.onGetCountSuccess)
+    .catch(ui.onGetCountFailure)
+}
+
 module.exports = {
   onStartGame,
-  onTurn
+  onTurn,
+  onGetCount
 }
