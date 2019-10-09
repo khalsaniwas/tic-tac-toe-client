@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Toe Game</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Tic-Tac-Toe</h1>
+
+      <div id="message" class="alert" role="alert">
+      </div>
+
+      <div id="sign-up-container" class='sign-up'>
+        <h2>Sign-up</h2>
+        <form id="sign-up">
+          <input type="email" name="credentials[email]" placeholder='Enter email...'>
+          <input type="password" name="credentials[password]" placeholder='Enter password'>
+          <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
+          <button>Sign Up</button>
+        </form>
+      </div>
+
+      <div id='sign-in-container'>
+        <h2>Sign-in</h2>
+        <form id="sign-in">
+          <input type="email" name="credentials[email]" placeholder='Enter email...'>
+          <input type="password" name="credentials[password]" placeholder='Enter password'>
+          <button>Sign In</button>
+        </form>
+      </div>
+
+      <div id='sign-out-container' class='d-none'>
+        <h3>Sign-out</h3>
+        <form id="sign-out">
+          <button>Sign out</button>
+        </form>
+      </div>
+
+      <div id='change-password-container' class='d-none'>
+        <h3>Change Password</h3>
+        <form id='change-password'>
+          <input type="password" name="passwords[old]" placeholder="Enter old password">
+          <input type="password" name="passwords[new]" placeholder="Enter new password">
+          <button class='password-button'>Change Password</button>
+        </form>
+      </div>
+
+      <div id="game" class="invisible">
+        <div id='controls-container'>
+          <h3>Controls</h3>
+          <button id='start-game'>Start Game</button>
+        </div>
+
+        <div>
+          <h3 id="turn"></h3>
+        </div>
+
+        <div id="error-message" class="alert" role="alert">
+        </div>
+
+        <div class='total-container'>
+          <button id="total-games" class="total-button">Total Games</button>
+
+          <div id="games-played" class="total-field">####
+          </div>
+        </div>
+
+        <div id="gameBoard" class="container">
+          <div id="0" class="col-4 box">t</div>
+          <div id="1" class="col-4 box">i</div>
+          <div id="2" class="col-4 box">c</div>
+          <div id="3" class="col-4 box">t</div>
+          <div id="4" class="col-4 box">a</div>
+          <div id="5" class="col-4 box">c</div>
+          <div id="6" class="col-4 box">t</div>
+          <div id="7" class="col-4 box">o</div>
+          <div id="8" class="col-4 box">e</div>
+        </div>
+      </div>
+
+
+
+
+    </body>
+</html>
